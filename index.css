@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif; 
+    font-size: none;
+    text-decoration: none; 
+    box-sizing: border-box; 
+}
+/* ---- first img----- */
+.img_one{
+    /* padding: 200px; */
+    margin-right: 200px;
+    margin-left: 200px;
+    height: 600px;
+    width: 800px;
+}
+/* ----- first-grid-layout */
+.first-grid-layout{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.one img{
+    margin-left: 100px;
+    height: 350px;
+    width:100%;
+}
+.first-grid-layout.second ,p,h4 {
+ margin-left: 150px;
+}
+
+/*  ------ grid layout---- */
+.container{
+    background:linear-gradient(45deg, blueviolt, lightgreen);
+    padding:15px 9%;
+    padding-bottom: 100px;
+}
+.container .heading{
+text-align:center;
+padding-bottom:15px;
+color:#fff;
+text-shadow: 0 5px 10px rgba(0,0,0,.2);
+font-size:50px;
+}
+.container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    gap:30px;
+
+}
+.container .box-container .box{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding:30px 20px;
+}
+.container .box-container .box img{
+    height:80px;
+}
+.container .box-container .box h3{
+    color:#444;
+    font-size :22px;
+    padding:10px 0;
+}
+.container .box-container .box p{
+    color:#777;
+    font-size :15px;
+    line-height:1.8;
+}
+
+
+/* ----------faq------- */
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+.accordion{
+    /* box-shadow: 10px 10px yellow; */
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordion li{
+    /* box-shadow:10px 10px yellow; */
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18 px;
+  font-weight: 500;
+  background:white;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+  /* box-shadow: 10px 10px green; */
+}
+label::after{
+     content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+display: none;
+}
+.accordion .content{
+   
+    background:white;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .email-signup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+.faq .small{
+font-size: 13px;
+}
